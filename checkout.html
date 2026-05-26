@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finalizar Compra</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <h2 class="logo">SPORTX</h2>
+
+    <div class="menu-links">
+      <a href="index.html">Início</a>
+      <a href="carrinho.html">Carrinho</a>
+    </div>
+  </nav>
+
+  <section class="checkout">
+
+    <div class="checkout-dados">
+
+      <h1>Finalizar Compra</h1>
+
+      <p class="subtitulo">
+        Preencha seus dados para concluir o pedido.
+      </p>
+
+      <label>Nome completo</label>
+      <input type="text" placeholder="Digite seu nome">
+
+      <label>E-mail</label>
+      <input type="email" placeholder="Digite seu e-mail">
+
+      <label>Telefone</label>
+      <input type="text" placeholder="Digite seu telefone">
+
+      <label>Endereço</label>
+      <input type="text" placeholder="Rua, número, bairro">
+
+      <label>Forma de pagamento</label>
+      <select>
+        <option>Cartão de crédito</option>
+        <option>Pix</option>
+        <option>Boleto</option>
+        <option>PayPal</option>
+      </select>
+
+      <button class="btn-confirmar" onclick="finalizarPedido()">
+        Confirmar Pedido
+      </button>
+
+    </div>
+
+    <div class="checkout-resumo">
+
+      <h2>Resumo do Pedido</h2>
+
+      <div id="resumo-produtos"></div>
+
+      <div class="checkout-total">
+        <span>Total:</span>
+        <strong>R$ <span id="checkout-total">0.00</span></strong>
+      </div>
+
+      <div id="paypal-button-container"></div>
+
+    </div>
+
+  </section>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=SEU_CLIENT_ID&currency=BRL"></script>
+  <script src="script.js"></script>
+
+  <script>
+    mostrarResumoCheckout();
+
+    function finalizarPedido(){
+      alert("Pedido confirmado com sucesso!");
+
+      carrinho = [];
+
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

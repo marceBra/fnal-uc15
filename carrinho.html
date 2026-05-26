@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Carrinho</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav>
+
+    <h2 class="logo">SPORTX</h2>
+
+    <div class="menu-links">
+
+      <a href="index.html">Início</a>
+
+      <a href="carrinho.html" class="link-carrinho">
+        <img src="img/carrinho-compra.png"
+        alt="Carrinho"
+        class="icone-carrinho">
+      </a>
+
+    </div>
+
+  </nav>
+
+  <section class="carrinho">
+
+    <h1>Seu Carrinho</h1>
+
+    <p class="subtitulo">
+      Confira os produtos adicionados ao carrinho.
+    </p>
+
+    <div id="lista-carrinho"></div>
+
+    <h2 class="total-texto">
+
+      Total:
+      R$ <span id="total">0.00</span>
+
+    </h2>
+
+    <button class="btn-finalizar">
+      Finalizar Compra
+    </button>
+
+    <div id="paypal-button-container"></div>
+
+  </section>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AUcZCoJFAGJfLIfusrs6slOyhABDGolIv4QI9s7jqsJO8aa_yH1YhwwuXS0dPQt1FGpbMbqRUtCdeE0Y"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    atualizarCarrinho();
+
+    let btnFinalizar = document.querySelector(".btn-finalizar");
+
+    if(btnFinalizar){
+
+      btnFinalizar.onclick = function(){
+
+        if(carrinho.length <= 0){
+
+          alert("Seu carrinho está vazio!");
+
+          return;
+
+        }
+
+        alert("Use o botão do PayPal abaixo para finalizar o pagamento.");
+
+      };
+
+    }
+
+  </script>
+
+</body>
+
+</html>

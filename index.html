@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SPORTX</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <h2 class="logo">SPORTX</h2>
+
+    <div class="menu-links">
+      <a href="#" onclick="mostrarPorCategoria('destaques')">Destaques</a>
+      <a href="#" onclick="mostrarPorCategoria('copa')">Copa</a>
+      <a href="#" onclick="mostrarPorCategoria('chuteiras')">Chuteiras</a>
+      <a href="#" onclick="mostrarPorCategoria('gamer')">Gamer</a>
+      <a href="#" onclick="mostrarPorCategoria('acessorios')">Acessórios</a>
+      <a href="#" onclick="mostrarPorCategoria('equipamentos')">Equipamentos</a>
+
+      <a href="carrinho.html" class="link-carrinho">
+        <img src="img/carrinho-compra.png" alt="Carrinho" class="icone-carrinho">
+      </a>
+    </div>
+  </nav>
+
+  <section class="banner-carrossel">
+    <button class="banner-seta esquerda" onclick="trocarBanner(-1)">‹</button>
+
+    <img id="banner-img" src="img/banner1.jpg" alt="Banner">
+
+    <button class="banner-seta direita" onclick="trocarBanner(1)">›</button>
+  </section>
+
+  <section class="marcas">
+    <h1>Compre por Marca</h1>
+
+    <p class="subtitulo">
+      As marcas esportivas mais procuradas
+    </p>
+
+    <div class="area-marcas">
+
+      <div class="marca" onclick="mostrarPorMarca('nike')">
+        <img src="img/nike.png" alt="Nike">
+      </div>
+
+      <div class="marca" onclick="mostrarPorMarca('adidas')">
+        <img src="img/adidas.png" alt="Adidas">
+      </div>
+
+      <div class="marca" onclick="mostrarPorMarca('puma')">
+        <img src="img/puma.png" alt="Puma">
+      </div>
+
+      <div class="marca" onclick="mostrarPorMarca('mizuno')">
+        <img src="img/mizuno.png" alt="Mizuno">
+      </div>
+
+      <div class="marca" onclick="mostrarPorMarca('jordan')">
+        <img src="img/jordan.png" alt="Jordan">
+      </div>
+
+      <div class="marca" onclick="mostrarPorMarca('newbalance')">
+        <img src="img/newbalance.png" alt="New Balance">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="times">
+    <h1>Seleções</h1>
+
+    <p class="subtitulo">
+      Camisas oficiais das maiores seleções do mundo
+    </p>
+
+    <div class="carrossel-times">
+
+      <div class="time-card">
+        <img src="img/brasil.png" alt="Brasil">
+        <h3>Brasil</h3>
+      </div>
+
+      <div class="time-card">
+        <img src="img/argentina.png" alt="Argentina">
+        <h3>Argentina</h3>
+      </div>
+
+      <div class="time-card">
+        <img src="img/franca.png" alt="França">
+        <h3>França</h3>
+      </div>
+
+      <div class="time-card">
+        <img src="img/portugal.png" alt="Portugal">
+        <h3>Portugal</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="destaques">
+    <h1 id="titulo-produtos">Produtos em Destaque</h1>
+
+    <p class="subtitulo" id="subtitulo-produtos">
+      Escolha um produto em destaque.
+    </p>
+
+    <div id="produtos-destaque" class="area-produtos"></div>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
